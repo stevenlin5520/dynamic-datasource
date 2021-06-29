@@ -1,0 +1,7 @@
+HELP.md
+target/
+**/**.iml
+!**/src/main/**/target/
+!**/src/test/**/target/
+.idea
+**/target/

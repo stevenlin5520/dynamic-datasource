@@ -1,0 +1,21 @@
+server:
+  port: 8888 # 启动端口
+spring:
+  datasource:
+    dynamic:
+      primary: db1 # 配置默认数据库
+      datasource:
+        db1: # 数据源1配置
+          jdbc-url: jdbc:mysql://localhost:3306/steven?characterEncoding=utf8
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        db2: # 数据源2配置
+          jdbc-url: jdbc:mysql://localhost:3306/steven2?characterEncoding=utf8
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
