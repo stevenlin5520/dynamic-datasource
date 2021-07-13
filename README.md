@@ -6,6 +6,7 @@
 
 ## 实现原理
 正常情况下，我们操作数据是通过配置一个DataSource数据源来连接数据库，然后绑定给SqlSessionFactory，然后通过Dao或Mapper指定SqlSessionFactory来操作数据库的。
+
 ![Alt](https://img-blog.csdnimg.cn/20210713193335293.jpg#pic_center)
 
 而操作多数据源则更要复杂一点，可以通过如下两种方式来实现：
@@ -398,9 +399,9 @@ public class DynamicDataSourceAspect {
 ### 编写业务类
 1、数据源中对应表结构和数据如下：
 
-![Alt](https://img-blog.csdnimg.cn/20210713193835875.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNzk5MzY2,size_16,color_FFFFFF,t_70#pic_left)
+![Alt](https://img-blog.csdnimg.cn/20210713193835875.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNzk5MzY2,size_16,color_FFFFFF,t_70#pic_center)
 
-![Alt](https://img-blog.csdnimg.cn/20210713193855262.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNzk5MzY2,size_16,color_FFFFFF,t_70#pic_right)
+![Alt](https://img-blog.csdnimg.cn/20210713193855262.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNzk5MzY2,size_16,color_FFFFFF,t_70#pic_center)
 
 数据源1中包含grade表和user表；数据源2中包含grade表；两个数据源中的grade表结构是完全一样的，此处需求也是一样，都是查询全部的数据。
 
@@ -525,7 +526,7 @@ public class TestController {
 6、其他代码就不详细赘述，可以参考demo中的代码
 
 ### 数据源测试
-启动项目，调用测试服务 http://127.0.0.1:8888/test，可以看到控制台中的打印结果如下，与需求结果一致，动态数据源算是成功了。
+启动项目，调用测试服务 http://127.0.0.1:8888/test， 可以看到控制台中的打印结果如下，与需求结果一致，动态数据源算是成功了。
 
 ![Alt](https://img-blog.csdnimg.cn/2021071319395323.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNzk5MzY2,size_16,color_FFFFFF,t_70#pic_center)
 
