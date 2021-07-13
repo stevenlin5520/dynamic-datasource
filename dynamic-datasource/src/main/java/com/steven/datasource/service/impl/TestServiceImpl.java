@@ -26,16 +26,17 @@ public class TestServiceImpl implements TestService {
     @Override
     public void test(){
         List<UserEntity> users = userService.selectAll();
-        System.out.println("users = " + users);
+        System.out.println("db1.users = " + users);
 
         List<GradeEntity> gradeEntities = gradeServvice.selectAll();
         System.out.println("gradeEntities = " + gradeEntities);
 
-        final List<GradeEntity> gradeEntities1 = userService.selectAll2();
-        System.out.println("gradeEntities1 = " + gradeEntities1);
+        final List<GradeEntity> gradeEntities1 = userService.selectGrade1();
+        System.out.println("db1.grades  = " + gradeEntities1);
 
-        List<UserEntity> users2 = userService.selectAll();
-        System.out.println("users2 = " + users2);
+        final List<GradeEntity> gradeEntities2 = userService.selectGrade2();
+        System.out.println("db2.grades  = " + gradeEntities2);
+
     }
 
 }

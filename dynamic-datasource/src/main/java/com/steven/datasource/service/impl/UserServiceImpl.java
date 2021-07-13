@@ -35,7 +35,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
 
     @DataSource(DataSourceType.DB1)
     @Override
-    public List<GradeEntity> selectAll2() {
+    public List<GradeEntity> selectGrade1() {
+        final List<GradeEntity> gradeEntities = gradeMapper.selectAll();
+        return gradeEntities;
+    }
+
+    @DataSource(DataSourceType.DB2)
+    @Override
+    public List<GradeEntity> selectGrade2() {
         final List<GradeEntity> gradeEntities = gradeMapper.selectAll();
         return gradeEntities;
     }

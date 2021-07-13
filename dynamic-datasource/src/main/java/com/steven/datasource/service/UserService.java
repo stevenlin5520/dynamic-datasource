@@ -13,6 +13,7 @@ import java.util.List;
 public interface UserService {
 
     List<UserEntity> selectAll();
-    List<GradeEntity> selectAll2();
+    List<GradeEntity> selectGrade1();
+    List<GradeEntity> selectGrade2();
 
 }
